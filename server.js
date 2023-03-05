@@ -14,7 +14,7 @@ const pg = require('pg'); //1. importing the pg
 server.use(cors());
 server.use(express.json());
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT  || 3000;
 
 //2. create obj from Client
 const client = new pg.Client(process.env.DATABASE_URL);
